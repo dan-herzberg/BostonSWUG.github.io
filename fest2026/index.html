@@ -52,7 +52,7 @@ body::before {
 /* ── NAV ── */
 nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0; left: var(--sidebar-w, 0); right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -1209,8 +1209,14 @@ footer {
 .mobile-menu .mobile-rsvp:hover { background: var(--gold2); color: #fff; }
 
 /* ── RESPONSIVE ── */
+@media (min-width: 901px) and (max-width: 1180px) {
+  nav { padding: 18px 24px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 12px; }
+}
+
 @media (max-width: 900px) {
-  nav { padding: 12px 20px; }
+  nav { padding: 12px 20px; left: 0; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
 
@@ -1302,7 +1308,6 @@ footer {
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9758094754530463" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/assets/sidebar.css">
-<link rel="stylesheet" href="/assets/sidebar-overlay.css">
 </head>
 <body>
 
@@ -1367,6 +1372,7 @@ footer {
   </div>
 </aside>
 
+<div class="site-main">
 
 <!-- NAV -->
 <nav>
@@ -2274,6 +2280,8 @@ footer {
     <a href="mailto:BostonSWUG@gmail.com">Contact</a>
   </div>
 </footer>
+
+</div><!-- /site-main -->
 
 <script>
 // Navigate from agenda to session card, scroll and auto-expand
