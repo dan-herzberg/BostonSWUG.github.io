@@ -1,0 +1,16 @@
+/* Additive override: turns the site-wide sidebar into an always-collapsed
+   overlay drawer, for use on pages (like the fest2026 microsite) that
+   already have their own full-width layout and shouldn't be pushed over. */
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform .28s ease;
+  box-shadow: 24px 0 48px rgba(0,0,0,.4);
+}
+.sidebar.open { transform: translateX(0); }
+.sidebar-backdrop.open { display: block; }
+.sidebar-toggle {
+  display: flex;
+  top: auto;
+  bottom: 20px;
+  left: 20px;
+}

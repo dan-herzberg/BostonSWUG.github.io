@@ -351,8 +351,72 @@ footer {
 </style>
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9758094754530463" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/assets/sidebar.css">
+<link rel="stylesheet" href="/assets/sidebar-overlay.css">
 </head>
 <body>
+
+<button class="sidebar-toggle" id="siteSidebarToggle" aria-label="Toggle BostonSWUG navigation"><span></span></button>
+<div class="sidebar-backdrop" id="siteSidebarBackdrop"></div>
+<aside class="sidebar" id="siteSidebar">
+  <a href="/" class="sidebar-logo">
+    <img src="/fest2026/images/swug-icon.png" alt="BostonSWUG">
+    <span class="sidebar-logo-text">Boston <span>SolidWorks</span><br>User Group</span>
+  </a>
+
+  <div class="sidebar-block">
+    <a href="/meetings/2026-08-25-millforge/" class="sidebar-cta">
+      <div class="sidebar-cta-eyebrow">Next Meeting</div>
+      <div class="sidebar-cta-title">Mill Forge Makerspace</div>
+      <div class="sidebar-cta-meta">Tuesday, August 25, 2026</div>
+    </a>
+  </div>
+
+  <div class="sidebar-block">
+    <a href="/fest2026/" class="sidebar-link active">
+      <span class="sl-title">This Year's Festival</span>
+      <span class="sl-meta">June 26, 2026 &middot; Dassault Syst&egrave;mes HQ</span>
+    </a>
+  </div>
+
+  <div class="sidebar-block">
+    <div class="sidebar-label">Past Meetings</div>
+    <a href="/meetings/2025-12-01-millforge/" class="sidebar-link">
+      <span class="sl-title">Mill Forge Makerspace</span>
+      <span class="sl-meta">December 1, 2025</span>
+    </a>
+    <a href="/meetings/2025-09-16-millforge/" class="sidebar-link">
+      <span class="sl-title">Mill Forge Makerspace</span>
+      <span class="sl-meta">September 16, 2025</span>
+    </a>
+    <a href="/meetings/2025-06-26-festival/" class="sidebar-link">
+      <span class="sl-title">BostonSWUG Summer Festival</span>
+      <span class="sl-meta">June 26, 2025</span>
+    </a>
+    <a href="/meetings/2024-10-09-massrobotics/" class="sidebar-link">
+      <span class="sl-title">MassRobotics</span>
+      <span class="sl-meta">October 9, 2024</span>
+    </a>
+    <a href="/meetings/2024-06-27-festival/" class="sidebar-link">
+      <span class="sl-title">BostonSWUG Summer Festival</span>
+      <span class="sl-meta">June 27, 2024</span>
+    </a>
+    <a href="/meetings/2023-06-23-ironswug/" class="sidebar-link">
+      <span class="sl-title">IRONSWUG</span>
+      <span class="sl-meta">June 23, 2023</span>
+    </a>
+    <a href="/meetings/2023-05-10-middlesex-cc/" class="sidebar-link">
+      <span class="sl-title">Middlesex Community College</span>
+      <span class="sl-meta">May 10, 2023</span>
+    </a>
+    <a href="/meetings/2023-01-26-solidworks-hq/" class="sidebar-link">
+      <span class="sl-title">SOLIDWORKS HQ</span>
+      <span class="sl-meta">January 26, 2023</span>
+    </a>
+    <div class="sidebar-note">Archive continues back to 2015 — more meetings coming soon.</div>
+  </div>
+</aside>
+
 
 <!-- NAV -->
 <nav>
@@ -837,5 +901,19 @@ lightbox.addEventListener('touchend', e => {
 });
 </script>
 
+<script>
+/* siteSidebarScriptInit */
+(function(){
+  var toggle = document.getElementById('siteSidebarToggle');
+  var sidebar = document.getElementById('siteSidebar');
+  var backdrop = document.getElementById('siteSidebarBackdrop');
+  function close(){ sidebar.classList.remove('open'); backdrop.classList.remove('open'); }
+  if (toggle) toggle.addEventListener('click', function(){
+    sidebar.classList.toggle('open');
+    backdrop.classList.toggle('open');
+  });
+  if (backdrop) backdrop.addEventListener('click', close);
+})();
+</script>
 </body>
 </html>

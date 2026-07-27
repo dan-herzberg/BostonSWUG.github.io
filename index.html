@@ -1,14 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=/fest2026/">
-  <link rel="canonical" href="https://bostonswug.com/fest2026/">
-  <title>BostonSWUG Summer Festival 2026</title>
-  <script>window.location.replace("/fest2026/");</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boston SolidWorks User Group</title>
+<meta name="description" content="BostonSWUG is a free, volunteer-run community for SOLIDWORKS users in the Boston area — meeting regularly since 2015 for technical training, networking, and an annual summer festival.">
+<link rel="canonical" href="https://bostonswug.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9758094754530463" crossorigin="anonymous"></script>
 </head>
-<body style="background:#0a0b0f;color:#f5f3ee;font-family:system-ui,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;">
-  <p>Redirecting to the <a href="/fest2026/" style="color:#d9403a;">BostonSWUG Summer Festival 2026</a>&hellip;</p>
+<body>
+
+<button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation"><span></span></button>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<aside class="sidebar" id="sidebar">
+  <a href="/" class="sidebar-logo">
+    <img src="/fest2026/images/swug-icon.png" alt="BostonSWUG">
+    <span class="sidebar-logo-text">Boston <span>SolidWorks</span><br>User Group</span>
+  </a>
+
+  <div class="sidebar-block">
+    <a href="/meetings/2026-08-25-millforge/" class="sidebar-cta">
+      <div class="sidebar-cta-eyebrow">Next Meeting</div>
+      <div class="sidebar-cta-title">Mill Forge Makerspace</div>
+      <div class="sidebar-cta-meta">Tuesday, August 25, 2026</div>
+    </a>
+  </div>
+
+  <div class="sidebar-block">
+    <a href="/fest2026/" class="sidebar-link">
+      <span class="sl-title">This Year's Festival</span>
+      <span class="sl-meta">June 26, 2026 &middot; Dassault Syst&egrave;mes HQ</span>
+    </a>
+  </div>
+
+  <div class="sidebar-block">
+    <div class="sidebar-label">Past Meetings</div>
+    <a href="/meetings/2025-12-01-millforge/" class="sidebar-link">
+      <span class="sl-title">Mill Forge Makerspace</span>
+      <span class="sl-meta">December 1, 2025</span>
+    </a>
+    <a href="/meetings/2025-09-16-millforge/" class="sidebar-link">
+      <span class="sl-title">Mill Forge Makerspace</span>
+      <span class="sl-meta">September 16, 2025</span>
+    </a>
+    <a href="/meetings/2025-06-26-festival/" class="sidebar-link">
+      <span class="sl-title">BostonSWUG Summer Festival</span>
+      <span class="sl-meta">June 26, 2025</span>
+    </a>
+    <a href="/meetings/2024-10-09-massrobotics/" class="sidebar-link">
+      <span class="sl-title">MassRobotics</span>
+      <span class="sl-meta">October 9, 2024</span>
+    </a>
+    <a href="/meetings/2024-06-27-festival/" class="sidebar-link">
+      <span class="sl-title">BostonSWUG Summer Festival</span>
+      <span class="sl-meta">June 27, 2024</span>
+    </a>
+    <a href="/meetings/2023-06-23-ironswug/" class="sidebar-link">
+      <span class="sl-title">IRONSWUG</span>
+      <span class="sl-meta">June 23, 2023</span>
+    </a>
+    <a href="/meetings/2023-05-10-middlesex-cc/" class="sidebar-link">
+      <span class="sl-title">Middlesex Community College</span>
+      <span class="sl-meta">May 10, 2023</span>
+    </a>
+    <a href="/meetings/2023-01-26-solidworks-hq/" class="sidebar-link">
+      <span class="sl-title">SOLIDWORKS HQ</span>
+      <span class="sl-meta">January 26, 2023</span>
+    </a>
+    <div class="sidebar-note">Archive continues back to 2015 — more meetings coming soon.</div>
+  </div>
+</aside>
+
+<div class="site-main">
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid">
+    <div class="page-hero-glow"></div>
+    <svg viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f5f3ee" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="smallgrid" width="12" height="12" patternUnits="userSpaceOnUse">
+          <path d="M 12 0 L 0 0 0 12" fill="none" stroke="#f5f3ee" stroke-width="0.2"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#smallgrid)"/>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">SWUGN Chapter &middot; Est. 2015</div>
+    <h1 class="hero-title">Boston<br><em>SolidWorks</em> User Group</h1>
+    <p class="hero-sub">A free, volunteer-run community for SOLIDWORKS users across Greater Boston. We've been meeting at member companies, schools, and makerspaces for a decade — for hands-on training, real talk with other engineers, and one very large festival every summer.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Members</span>
+        <span class="hero-meta-value">170+</span>
+      </div>
+      <div class="hero-meta-sep"></div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Meeting Since</span>
+        <span class="hero-meta-value">2015</span>
+      </div>
+      <div class="hero-meta-sep"></div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Cost</span>
+        <span class="hero-meta-value">Always Free</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT MEETING CALLOUT -->
+<section class="section" style="padding-top:0;">
+  <div class="section-inner wide">
+    <div class="card" style="border-color:rgba(193,41,46,.3); background:linear-gradient(160deg, rgba(193,41,46,.1), var(--ink2)); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
+      <div>
+        <div class="section-eyebrow" style="margin-bottom:8px;">Next Meeting</div>
+        <div style="font-family:var(--ff-display); font-weight:800; font-size:24px; color:var(--white); margin-bottom:6px;">Mill Forge Makerspace &mdash; Tuesday, August 25, 2026</div>
+        <div style="font-size:14px; color:var(--white2);">61 Endicott Street, Norwood, MA &middot; Presenters and food details coming soon</div>
+      </div>
+      <a href="/meetings/2026-08-25-millforge/" class="btn-primary">Meeting Details</a>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-eyebrow">Who We Are</div>
+    <h2 class="section-label">Our History</h2>
+    <div class="prose">
+      <p>Boston SWUG (originally the Boston Area North SolidWorks User Group, or BANSWUG) is one of the longest-running SOLIDWORKS User Group Network (SWUGN) chapters in New England. Our meeting records go back to 2015, but the group's roots as an informal gathering of local engineers go back further still.</p>
+      <p>For most of our history, we've met at the offices of member companies and sponsors across the Boston area &mdash; Medica, FLIR, ITT, Lytron, ProSource, and many more opened their doors to host an evening of <strong>free SOLIDWORKS training, networking, and pizza</strong>. We've also gathered at schools like Middlesex Community College and UMass Lowell, at the Charles River Museum of Industry, and at SOLIDWORKS' own Waltham headquarters.</p>
+      <p>Along the way we ran periodic <strong>SLUGME</strong> events &mdash; larger joint meetups with sister user groups across the region &mdash; and, like everyone else, took our meetings fully virtual in 2020 before returning in person in November 2021 with "Back to BostonSWUG."</p>
+      <p>In 2023 our June meeting grew into something bigger: the first <strong>BostonSWUG Summer Festival</strong>, a full afternoon of breakout sessions, food, and prizes at Dassault Syst&egrave;mes' Waltham campus. It's now our marquee annual event, running every summer since. In 2025 we also kicked off a new partnership with <strong>Mill Forge Makerspace</strong> in Norwood, hosting smaller recurring meetups in a hands-on maker space alongside our usual technical sessions.</p>
+      <p>Today BostonSWUG has over 170 members. Every meeting is free, open to the public, and run entirely by volunteers &mdash; we're just engineers who like SOLIDWORKS and like getting other engineers together to talk about it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THIS YEAR'S FESTIVAL -->
+<section class="section" style="padding-top:0;">
+  <div class="section-inner wide">
+    <div class="card" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
+      <div>
+        <div class="section-eyebrow" style="margin-bottom:8px;">2026 Summer Festival</div>
+        <div style="font-family:var(--ff-display); font-weight:800; font-size:22px; color:var(--white); margin-bottom:6px;">The 4th Annual BostonSWUG Summer Festival</div>
+        <div style="font-size:14px; color:var(--white2);">June 26, 2026 at Dassault Syst&egrave;mes HQ, Waltham &mdash; schedule, speakers, and event photos</div>
+      </div>
+      <a href="/fest2026/" class="btn-secondary">Visit Festival Site &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT MEETINGS -->
+<section class="section">
+  <div class="section-inner wide">
+    <div class="section-eyebrow">Meeting Archive</div>
+    <h2 class="section-label">Recent Meetings</h2>
+    <div class="meeting-grid">
+      <a href="/meetings/2025-12-01-millforge/" class="meeting-card">
+        <div class="meeting-card-date">December 1, 2025</div>
+        <div class="meeting-card-title">Mill Forge Makerspace</div>
+        <div class="meeting-card-venue">Norwood, MA</div>
+      </a>
+      <a href="/meetings/2025-09-16-millforge/" class="meeting-card">
+        <div class="meeting-card-date">September 16, 2025</div>
+        <div class="meeting-card-title">Mill Forge Makerspace</div>
+        <div class="meeting-card-venue">Norwood, MA</div>
+      </a>
+      <a href="/meetings/2025-06-26-festival/" class="meeting-card">
+        <div class="meeting-card-date">June 26, 2025</div>
+        <div class="meeting-card-title">BostonSWUG Summer Festival</div>
+        <div class="meeting-card-venue">Dassault Syst&egrave;mes HQ, Waltham</div>
+      </a>
+      <a href="/meetings/2024-10-09-massrobotics/" class="meeting-card">
+        <div class="meeting-card-date">October 9, 2024</div>
+        <div class="meeting-card-title">MassRobotics</div>
+        <div class="meeting-card-venue">Boston, MA</div>
+      </a>
+      <a href="/meetings/2024-06-27-festival/" class="meeting-card">
+        <div class="meeting-card-date">June 27, 2024</div>
+        <div class="meeting-card-title">BostonSWUG Summer Festival</div>
+        <div class="meeting-card-venue">Dassault Syst&egrave;mes HQ, Waltham</div>
+      </a>
+      <a href="/meetings/2023-06-23-ironswug/" class="meeting-card">
+        <div class="meeting-card-date">June 23, 2023</div>
+        <div class="meeting-card-title">IRONSWUG</div>
+        <div class="meeting-card-venue">SOLIDWORKS Campus, Waltham</div>
+      </a>
+      <a href="/meetings/2023-05-10-middlesex-cc/" class="meeting-card">
+        <div class="meeting-card-date">May 10, 2023</div>
+        <div class="meeting-card-title">Middlesex Community College</div>
+        <div class="meeting-card-venue">Bedford, MA</div>
+      </a>
+      <a href="/meetings/2023-01-26-solidworks-hq/" class="meeting-card">
+        <div class="meeting-card-date">January 26, 2023</div>
+        <div class="meeting-card-title">SOLIDWORKS HQ</div>
+        <div class="meeting-card-venue">Waltham, MA</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand"><span>BostonSWUG</span> &middot; Boston SolidWorks User Group</div>
+  <div class="footer-copy">&copy; 2026 Boston SolidWorks User Group</div>
+</footer>
+
+</div><!-- /site-main -->
+
+<script>
+(function(){
+  var toggle = document.getElementById('sidebarToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  function close(){ sidebar.classList.remove('open'); backdrop.classList.remove('open'); }
+  if (toggle) toggle.addEventListener('click', function(){
+    sidebar.classList.toggle('open');
+    backdrop.classList.toggle('open');
+  });
+  if (backdrop) backdrop.addEventListener('click', close);
+})();
+</script>
+
 </body>
 </html>
