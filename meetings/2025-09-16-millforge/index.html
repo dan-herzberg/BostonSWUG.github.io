@@ -144,7 +144,36 @@
   <div class="section-inner wide">
     <div class="section-eyebrow">Recap</div>
     <h2 class="section-label">Photos</h2>
-    <div class="photos-empty">Photos coming soon.</div>
+    <div class="photo-columns" id="gallery">
+      <div class="photo-item" data-index="0">
+        <img src="millforge-01.png" alt="Mill Forge Makerspace — September 2025 — photo 1" loading="lazy">
+        <div class="photo-overlay"><span class="photo-overlay-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6h-2V5h-4V3zm-6 0H3v6h2V5h4V3zM3 15h2v4h4v2H3v-6zm18 4h-4v2h6v-6h-2v4z"/></svg></span></div>
+      </div>
+      <div class="photo-item" data-index="1">
+        <img src="millforge-02.png" alt="Mill Forge Makerspace — September 2025 — photo 2" loading="lazy">
+        <div class="photo-overlay"><span class="photo-overlay-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6h-2V5h-4V3zm-6 0H3v6h2V5h4V3zM3 15h2v4h4v2H3v-6zm18 4h-4v2h6v-6h-2v4z"/></svg></span></div>
+      </div>
+      <div class="photo-item" data-index="2">
+        <img src="millforge-03.png" alt="Mill Forge Makerspace — September 2025 — photo 3" loading="lazy">
+        <div class="photo-overlay"><span class="photo-overlay-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6h-2V5h-4V3zm-6 0H3v6h2V5h4V3zM3 15h2v4h4v2H3v-6zm18 4h-4v2h6v-6h-2v4z"/></svg></span></div>
+      </div>
+      <div class="photo-item" data-index="3">
+        <img src="millforge-04.png" alt="Mill Forge Makerspace — September 2025 — photo 4" loading="lazy">
+        <div class="photo-overlay"><span class="photo-overlay-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6h-2V5h-4V3zm-6 0H3v6h2V5h4V3zM3 15h2v4h4v2H3v-6zm18 4h-4v2h6v-6h-2v4z"/></svg></span></div>
+      </div>
+      <div class="photo-item" data-index="4">
+        <img src="millforge-05.png" alt="Mill Forge Makerspace — September 2025 — photo 5" loading="lazy">
+        <div class="photo-overlay"><span class="photo-overlay-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6h-2V5h-4V3zm-6 0H3v6h2V5h4V3zM3 15h2v4h4v2H3v-6zm18 4h-4v2h6v-6h-2v4z"/></svg></span></div>
+      </div>
+      <div class="photo-item" data-index="5">
+        <img src="millforge-06.png" alt="Mill Forge Makerspace — September 2025 — photo 6" loading="lazy">
+        <div class="photo-overlay"><span class="photo-overlay-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6h-2V5h-4V3zm-6 0H3v6h2V5h4V3zM3 15h2v4h4v2H3v-6zm18 4h-4v2h6v-6h-2v4z"/></svg></span></div>
+      </div>
+      <div class="photo-item" data-index="6">
+        <img src="millforge-07.png" alt="Mill Forge Makerspace — September 2025 — photo 7" loading="lazy">
+        <div class="photo-overlay"><span class="photo-overlay-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 3h6v6h-2V5h-4V3zm-6 0H3v6h2V5h4V3zM3 15h2v4h4v2H3v-6zm18 4h-4v2h6v-6h-2v4z"/></svg></span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -180,6 +209,65 @@
     backdrop.classList.toggle('open');
   });
   if (backdrop) backdrop.addEventListener('click', close);
+})();
+</script>
+
+<script>
+(function(){
+  var photos = [
+    { src: 'millforge-01.png', alt: 'Mill Forge Makerspace — September 2025' },
+    { src: 'millforge-02.png', alt: 'Mill Forge Makerspace — September 2025' },
+    { src: 'millforge-03.png', alt: 'Mill Forge Makerspace — September 2025' },
+    { src: 'millforge-04.png', alt: 'Mill Forge Makerspace — September 2025' },
+    { src: 'millforge-05.png', alt: 'Mill Forge Makerspace — September 2025' },
+    { src: 'millforge-06.png', alt: 'Mill Forge Makerspace — September 2025' },
+    { src: 'millforge-07.png', alt: 'Mill Forge Makerspace — September 2025' }
+  ];
+
+  var lightbox = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var lbCounter = document.getElementById('lb-counter');
+  var current = 0;
+
+  function showPhoto() {
+    var p = photos[current];
+    lbImg.src = p.src;
+    lbImg.alt = p.alt;
+    lbCounter.textContent = (current + 1) + ' / ' + photos.length;
+  }
+  function openLightbox(index) {
+    current = index;
+    showPhoto();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function prev() { current = (current - 1 + photos.length) % photos.length; showPhoto(); }
+  function next() { current = (current + 1) % photos.length; showPhoto(); }
+
+  document.querySelectorAll('.photo-item').forEach(function(el){
+    el.addEventListener('click', function(){ openLightbox(parseInt(el.dataset.index, 10)); });
+  });
+  document.getElementById('lb-backdrop').addEventListener('click', closeLightbox);
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', prev);
+  document.getElementById('lb-next').addEventListener('click', next);
+  document.addEventListener('keydown', function(e){
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  var touchStartX = 0;
+  lightbox.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  lightbox.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(dx) > 40) { dx > 0 ? prev() : next(); }
+  });
 })();
 </script>
 
