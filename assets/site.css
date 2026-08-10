@@ -50,6 +50,12 @@ html { scrollbar-color: var(--gold) var(--ink2); scrollbar-width: thin; }
 ::-webkit-scrollbar-thumb { background: rgba(193,41,46,.55); border-radius: 999px; border: 2px solid var(--ink2); }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
+.sidebar { scrollbar-color: var(--gold) var(--ink2); scrollbar-width: thin; }
+.sidebar::-webkit-scrollbar { width: 8px; }
+.sidebar::-webkit-scrollbar-track { background: var(--ink2); }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(193,41,46,.55); border-radius: 999px; border: none; }
+.sidebar::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
 /* ── SIDEBAR ── */
 .sidebar {
   position: fixed;
@@ -96,10 +102,16 @@ html { scrollbar-color: var(--gold) var(--ink2); scrollbar-width: thin; }
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: 0;
+  padding: 0 8px;
   background: none;
   border: none;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
   cursor: pointer;
   font: inherit;
+  text-align: left;
   color: var(--white3);
   transition: color .15s;
 }
