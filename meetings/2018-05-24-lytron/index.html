@@ -37,7 +37,11 @@
   </div>
 
   <div class="sidebar-block">
-    <div class="sidebar-label">Past Meetings</div>
+    <button class="sidebar-label sidebar-collapse-toggle" type="button" id="pastMeetingsToggle" aria-expanded="true" aria-controls="past-meetings-list">
+      <span>Past Meetings</span>
+      <svg class="sidebar-collapse-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="sidebar-collapse open" id="past-meetings-list">
     <a href="/meetings/2025-12-01-millforge/" class="sidebar-link">
       <span class="sl-title">Mill Forge Makerspace</span>
       <span class="sl-meta">December 1, 2025</span>
@@ -146,6 +150,7 @@
       <span class="sl-title">FLIR</span>
       <span class="sl-meta">June 23, 2015</span>
     </a>
+    </div>
   </div>
 </aside>
 
@@ -263,19 +268,7 @@
 
 </div><!-- /site-main -->
 
-<script>
-(function(){
-  var toggle = document.getElementById('sidebarToggle');
-  var sidebar = document.getElementById('sidebar');
-  var backdrop = document.getElementById('sidebarBackdrop');
-  function close(){ sidebar.classList.remove('open'); backdrop.classList.remove('open'); }
-  if (toggle) toggle.addEventListener('click', function(){
-    sidebar.classList.toggle('open');
-    backdrop.classList.toggle('open');
-  });
-  if (backdrop) backdrop.addEventListener('click', close);
-})();
-</script>
+<script src="/assets/sidebar.js"></script>
 
 </body>
 </html>

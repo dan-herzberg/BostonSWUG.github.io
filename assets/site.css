@@ -43,6 +43,13 @@ body::before {
 
 a { color: inherit; }
 
+/* ── SCROLLBARS ── */
+html { scrollbar-color: var(--gold) var(--ink2); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--ink2); }
+::-webkit-scrollbar-thumb { background: rgba(193,41,46,.55); border-radius: 999px; border: 2px solid var(--ink2); }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
 /* ── SIDEBAR ── */
 .sidebar {
   position: fixed;
@@ -82,6 +89,31 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--white3);
   padding: 0 8px;
+}
+
+.sidebar-collapse-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: var(--white3);
+  transition: color .15s;
+}
+.sidebar-collapse-toggle:hover { color: var(--white2); }
+.sidebar-collapse-icon { flex-shrink: 0; transition: transform .2s ease; }
+.sidebar-collapse-toggle[aria-expanded="true"] .sidebar-collapse-icon { transform: rotate(180deg); }
+
+.sidebar-collapse {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .3s ease;
 }
 
 .sidebar-cta {
